@@ -55,7 +55,7 @@ fetch(urla)
             //construir un elemento de lista
 
 
-            contenido += `<p><img src=${info[i].picture}><p>`, 
+            contenido += `<p><img src=${info[i].artist.picture}><p>`, 
             contenido += `<p>nombre:${info[i].type}<p>`, 
             contenido += `<p>tipo:${info[i].title}<p>`
 
