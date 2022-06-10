@@ -10,7 +10,7 @@ fetch(url)
 
         let info = data.artists.data;
 
-        let characterList = document.querySelector(".artistas");
+        let artistList = document.querySelector(".artistas");
         let contenido = "";
 
         for(let i=0; i<info.length; i++){
@@ -23,7 +23,7 @@ fetch(url)
 
         console.log(contenido);
 
-        characterList.innerHTML += contenido;
+        artistList.innerHTML += contenido;
 
     })
 
@@ -32,13 +32,9 @@ fetch(url)
         console.log(error);
     })
 
-
-
-
     let urla = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart";
 
 fetch(urla)
-
     .then(function(response){
         return response.json();
     })
@@ -48,22 +44,20 @@ fetch(urla)
 
         let info = data.albums.data;
 
-        let characterList = document.querySelector(".albums");
+        let albumList = document.querySelector(".albums");
         let contenido = "";
 
         for(let i=0; i<info.length; i++){
             //construir un elemento de lista
 
-
             contenido += `<p><img src=${info[i].artist.picture}><p>`, 
             contenido += `<p>nombre:${info[i].type}<p>`, 
             contenido += `<p>tipo:${info[i].title}<p>`
-
         }
 
         console.log(contenido);
 
-        characterList.innerHTML += contenido;
+        albumList.innerHTML += contenido;
 
     })
 
