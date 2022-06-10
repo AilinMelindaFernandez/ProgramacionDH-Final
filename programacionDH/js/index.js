@@ -16,9 +16,9 @@ fetch(url)
         for(let i=0; i<info.length; i++){
             //construir un elemento de lista
 
-            contenido += `<p><img src=${info[i].picture}><p>`, 
-            contenido += `<p>nombre:${info[i].name}<p>`, 
-            contenido += `<p>tipo:${info[i].type}<p>`
+            contenido += `<div class = "card"> <img src=${info[i].picture}></div>`, 
+            contenido += `<div class= "card">${info[i].name}</div>`
+          
         }
 
         console.log(contenido);
@@ -49,9 +49,8 @@ fetch(url)
         for(let i=0; i<info.length; i++){
             //construir un elemento de lista
 
-            contenido += `<p><img src=${info[i].artist.picture}><p>`, 
-            contenido += `<p>nombre:${info[i].type}<p>`, 
-            contenido += `<p>tipo:${info[i].title}<p>`
+            contenido += `<div class= "cardalbum"><img src=${info[i].artist.picture}></div>`,  
+            contenido += `<div class= "cardalbum">titulo:${info[i].title}</div>`
         }
 
         console.log(contenido);
@@ -83,9 +82,9 @@ fetch(url)
         for(let i=0; i<info.length; i++){
             //construir un elemento de lista
 
-            contenido += `<p><img src=${info[i].artist.picture}><p>`, 
-            contenido += `<p>nombre:${info[i].artist}<p>`, 
-            contenido += `<p>tipo:${info[i].title}<p>`
+            contenido += `<section class= "macrador"><img src=${info[i].artist.picture}></section>`, 
+            contenido += `<section class= "marcador">nombre:${info[i].artist.name}</section>`, 
+            contenido += `<section class= "marcador">titulo:${info[i].title}</section>`
         }
 
         console.log(contenido);
