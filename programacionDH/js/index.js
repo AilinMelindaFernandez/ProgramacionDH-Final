@@ -54,8 +54,8 @@ fetch(urla)
         for(let i=0; i<info.length; i++){
             //construir un elemento de lista
 
-<
-            contenido += `<p><img src=${info[i].artist.picture}><p>`, 
+
+            contenido += `<p><img src=${info[i].picture}><p>`, 
             contenido += `<p>nombre:${info[i].type}<p>`, 
             contenido += `<p>tipo:${info[i].title}<p>`
 
