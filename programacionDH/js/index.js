@@ -16,7 +16,7 @@ fetch(url)
         for(let i=0; i<info.length; i++){
             //construir un elemento de lista
 
-            contenido += `<div class = "card"> <img src=${info[i].picture}></div>`, 
+            contenido += `<div class = "card"> <img src=${info[i].picture_big}></div>`, 
             contenido += `<div class= "card">${info[i].name}</div>`
           
         }
@@ -49,7 +49,7 @@ fetch(url)
         for(let i=0; i<info.length; i++){
             //construir un elemento de lista
 
-            contenido += `<div class= "cardalbum"><img src=${info[i].artist.picture}></div>`,  
+            contenido += `<div class= "cardalbum"><img src=${info[i].artist.picture_big}></div>`,  
             contenido += `<div class= "cardalbum">titulo:${info[i].title}</div>`
         }
 
@@ -82,7 +82,7 @@ fetch(url)
         for(let i=0; i<info.length; i++){
             //construir un elemento de lista
 
-            contenido += `<section class= "macrador"><img src=${info[i].artist.picture}></section>`, 
+            contenido += `<section class= "macrador"><img src=${info[i].artist.picture_medium}></section>`, 
             contenido += `<section class= "marcador">nombre:${info[i].artist.name}</section>`, 
             contenido += `<section class= "marcador">titulo:${info[i].title}</section>`
         }
