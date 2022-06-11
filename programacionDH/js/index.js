@@ -15,7 +15,7 @@ fetch(url)
         let artistList = document.querySelector(".artistas");
         let contenido = "";
 
-        for(let i=0; i<5; i++){
+        for(let i=0; i<info.length; i++){
             //construir un elemento de lista
 
             contenido += `<div class="card"><a href="detail-artist.html?id=${info[i].id}"> `,
@@ -49,7 +49,7 @@ fetch(url)
         let albumList = document.querySelector(".albums");
         let contenido = "";
 
-        for(let i=0; i<5; i++){
+        for(let i=0; i<info.length; i++){
             //construir un elemento de lista
 
             contenido += `<div class= "cardalbum"><img src=${info[i].artist.picture_big}>`,  
@@ -83,7 +83,7 @@ fetch(url)
         let albumList = document.querySelector(".contenedorcanciones");
         let contenido = "";
 
-        for(let i=0; i<5; i++){
+        for(let i=0; i<info.length; i++){
             //construir un elemento de lista
 
             contenido += `<section class= "macrador"><img src=${info[i].artist.picture_medium}>`, 
