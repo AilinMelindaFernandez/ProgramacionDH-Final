@@ -41,14 +41,14 @@ fetch(`${proxy}${endpoint}${trackID}`)
         `
         let like = document.querySelector("#like") // botón de favorito
         
-    
+        let favoritos = []
         recupero_storage = localStorage.getItem("canciones_favoritas")
-        if (recupero_storage === "") {
+        if (recupero_storage === "" || recupero_storage === null) {
             recupero_storage = "[]"
         }
         console.log(recupero_storage)
         let string_to_array = JSON.parse(recupero_storage)
-        let favoritos = string_to_array
+        favoritos = string_to_array
 
         like.addEventListener('click', function() {
             if (favoritos.includes(data.id)) {
@@ -57,7 +57,7 @@ fetch(`${proxy}${endpoint}${trackID}`)
                 like.style.color = 'grey'
             } else {
                 favoritos.push(data.id)
-                like.style.color = 'pink'
+                like.style.color = 'green'
             }
             let favoritos_en_string = JSON.stringify(favoritos)
             localStorage.setItem("canciones_favoritas",favoritos_en_string)
