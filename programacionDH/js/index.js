@@ -1,13 +1,29 @@
-let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart";//url general
+let formularioHeader = document.querySelector("form")
+let inputFormulario = document.querySelector(".busqueda")
 
+formularioHeader.addEventListener("submit", function(evento) {
+    evento.preventDefault()
+    if (inputFormulario.value.length >= 3) {
+        this.submit()
+    } else {
+        alert("Son 3 caracteres como minimo")
+    }
+})
 
-//-------------------ARTISTAS----------------------
-fetch(url)
+let proxy = "https://api.allorigins.win/raw?url="
+let endpoints = {
+    canciones: "https://api.deezer.com/chart",
+    albumes: "https://api.deezer.com/chart",
+    artistas: "https://api.deezer.com/chart"
+}
+
+// Fetch de canciones
+fetch(`${proxy}${endpoints.artistas}`)
     .then(function(response){
         return response.json();
     })
-
     .then(function(data){
+
         console.log(data);
 
         let info = data.artists.data;
@@ -15,12 +31,12 @@ fetch(url)
         let artistList = document.querySelector(".artistas");
         let contenido = "";
 
-        for(let i=0; i<info.length; i++){
+        for(let i=0; i<5; i++){
             //construir un elemento de lista
 
-            contenido += `<div class="card"><a href="detail-artist.html?id=${info[i].id}"> `,
-            contenido += `<img src=${info[i].picture_big}>`, 
-            contenido += `<div class="container"><h4><b>${info[i].name}</b></h4></div> </a></div>`
+            contenido += `<div class = "card"> <img src=${info[i].picture_big}></div>`, 
+            contenido += `<div class= "card">${info[i].name}</div>`
+          
         }
 
         console.log(contenido);
@@ -28,19 +44,15 @@ fetch(url)
         artistList.innerHTML += contenido;
 
     })
-
-
     .catch(function(error){
         console.log(error);
     })
 
-  
-//------------------ALBUMS-------------------------------------    
-fetch(url)
+    
+    fetch(`${proxy}${endpoints.albumes}`)
     .then(function(response){
         return response.json();
     })
-
     .then(function(data){
         console.log(data);
 
@@ -49,12 +61,11 @@ fetch(url)
         let albumList = document.querySelector(".albums");
         let contenido = "";
 
-        for(let i=0; i<info.length; i++){
+        for(let i=0; i<5; i++){
             //construir un elemento de lista
 
-            contenido += `<div class= "cardalbum"><img src=${info[i].artist.picture_big}>`,  
-            contenido += `<div class="containeralbum"><h4><b>${info[i].title}</b></h4>`,
-            contenido += `<p>${info[i].artist.name}</p></div></div>`
+            contenido += `<div class= "cardalbum"><img src=${info[i].artist.picture_big}></div>`,  
+            contenido += `<div class= "cardalbum">titulo:${info[i].title}</div>`
         }
 
         console.log(contenido);
@@ -62,19 +73,16 @@ fetch(url)
         albumList.innerHTML += contenido;
 
     })
-
-
     .catch(function(error){
         console.log(error);
     })
 
     
-//------------------------CANCIONES-----------------------------------
-fetch(url)
+
+    fetch(`${proxy}${endpoints.canciones}`)
     .then(function(response){
         return response.json();
     })
-
     .then(function(data){
         console.log(data);
 
@@ -83,12 +91,12 @@ fetch(url)
         let albumList = document.querySelector(".contenedorcanciones");
         let contenido = "";
 
-        for(let i=0; i<info.length; i++){
+        for(let i=0; i<5; i++){
             //construir un elemento de lista
 
-            contenido += `<section class= "macrador"><img src=${info[i].artist.picture_medium}>`, 
-            contenido += `${info[i].artist.name}`, 
-            contenido += `${info[i].title}</section>`
+            contenido += `<section class= "macrador"><img src=${info[i].artist.picture_medium}></section>`, 
+            contenido += `<section class= "marcador">nombre:${info[i].artist.name}</section>`, 
+            contenido += `<section class= "marcador"><a href="detail-track.html?q=${info[i].id}">titulo:${info[i].title}</a></section>`
         }
 
         console.log(contenido);
@@ -96,8 +104,6 @@ fetch(url)
         albumList.innerHTML += contenido;
 
     })
-
-
     .catch(function(error){
         console.log(error);
     })

@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
                 <li><a href="generos.html">GENEROS</a></li>
                 <li><a href="playlist.html">PLAYLIST</a></li>
                 <li> <form method="get" action="search-results.html">
-                        <input class="busqueda" type="search" placeholder="Buscar">
+                        <input class="busqueda" type="search" name="q" placeholder="Buscar">
                     </form>
                 </li>
             </ul>
@@ -45,33 +45,15 @@
 
         <div class="contenedorgeneralinfocancion">
             <div class="infocancioncontenedor">
-
-                <img src="./img/albums/arianagrande-album.jpg" class="cancionalbumfoto">
-                <div class="infocancion">
-                    <h3 class="titulosdetalleh3">7 Rings </h3>
-                    <ol>
-                        <li class="listainfocancion">
-                            <p><a href="./detail-artist.html">Artista: Ariana Grande</a></p>
-                        </li>
-                        <li class="listainfocancion">
-                            <p><a href="./detail-album.html">Album: Thank U, Next</a></p>
-                        </li>
-                        <li class="listainfocancion">
-                            <p>Fecha de lanzamiento: 18 de enero de 2019</p>
-                        </li>
-                        <li class="listainfocancion">
-                            <p>Duracion: 2:59</p>
-                        </li>
-                    </ol> 
-                    <div class="iramiplaylist">
-                        <a href="./playlist.html">Mi playlist</a>
-                        <i class="fa-solid fa-heart-circle-plus"></i>
-                    </div>
+                <!--Agregar la info que viene de la api con JS-->
+                <div class="iramiplaylist">
+                    <a href="./playlist.html">Mi playlist</a>
+                    <i id="like" class="fa-solid fa-heart-circle-plus"></i>
                 </div>
             </div>
-
+            
             <div class="reproductor">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6ocbgoVGwYJhOv1GgI9NsF?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                
             </div>
         </div>
     </section>
@@ -91,6 +73,6 @@
             </div>
         </div>
     </footer>
-
+    <script src="./js/detail-track.js"></script>
 </body>
 </html>
