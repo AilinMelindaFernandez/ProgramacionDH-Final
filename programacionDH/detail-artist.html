@@ -20,16 +20,18 @@
         <input type="checkbox" id="toggler" >
         <label for="toggler"><i class="fa-solid fa-bars "></i></label>
         
-        <div class="menu">
+        <div class="menu"> <!--Cambiar div por section-->
             <ul class="list">
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="detail-artist.html">ARTIST</a></li>
-                <li><a href="detail-album.html">ALBUMS</a></li>
-                <li><a href="detail-track.html">SONGS</a></li>
+                <li><a href="#artist">ARTIST</a></li>
+                <li><a href="#album">ALBUMS</a></li>
+                <li><a href="#cancion">SONGS</a></li>
                 <li><a href="generos.html">GENEROS</a></li>
                 <li><a href="playlist.html">PLAYLIST</a></li>
-                <li> <form method="get" action="search-results.html">
+                <li> 
+                    <form method="get" action="search-results.html">
                         <input class="busqueda" type="search" placeholder="Buscar">
+                        <button><i class="fa-solid fe-search"></i></button> <!--Agregamos un boton-->
                     </form>
                 </li>
             </ul>
@@ -44,6 +46,19 @@
         <h2 class="titulosdetalles">Artist</h2>
 
         <div class="contenedorinfoartist">
+            <img src="" alt="Artista" class="artistafoto">
+            <h3 class="titulosdetalleh3"> </h3>
+
+            <div class="fans">
+                <!------Cantidad de fans------->
+            </div>
+
+            <h3 class="titulosdetalleh3">Albums</h3>
+            <ol class="olDeArtistaDetalle">
+                <!------Albumnes lista---------->
+            </ol>
+
+
             <!-----------------------SECCION ARTISTA DETALLE
 
             <img src="./img/artistas/arianagrande.jpg" class="artistafoto">
@@ -75,8 +90,7 @@
 
             
         </div>
-        <img src="" alt="">
-
+        
         
 
 
