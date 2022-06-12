@@ -38,8 +38,14 @@ fetch(`${proxy}${endpoints.artistas}`)
         for(let i=0; i<5; i++){
             //construir un elemento de lista
 
-            contenido += `<div class = "card"> <img src=${info[i].picture_big}></div>`, 
-            contenido += `<div class= "card">${info[i].name}</div>`
+            contenido += `<div class="card">
+                            <a href="detail-artist.html?id=${info[i].id}"> 
+                                <img src=${info[i].picture_big}>
+                                <div class="container">
+                                    <h4><b>${info[i].name}</b></h4>
+                                </div> 
+                            </a>
+                          </div>`
           
         }
 
@@ -69,8 +75,15 @@ fetch(`${proxy}${endpoints.artistas}`)
         for(let i=0; i<5; i++){
             //construir un elemento de lista
 
-            contenido += `<div class= "cardalbum"><img src=${info[i].artist.picture_big}></div>`,  
-            contenido += `<div class= "cardalbum">titulo:${info[i].title}</div>`
+            contenido += `<div class= "cardalbum">
+                            <img src=${info[i].artist.picture_big}>  
+                            <div class="containeralbum">
+                                <h4><b>${info[i].title}</b></h4>
+                                <p>${info[i].artist.name}</p>
+                            </div>
+                          </div>`
+
+
         }
 
         console.log(contenido);
@@ -100,9 +113,18 @@ fetch(`${proxy}${endpoints.artistas}`)
         for(let i=0; i<5; i++){
             //construir un elemento de lista
 
-            contenido += `<section class= "macrador"><img src=${info[i].artist.picture_medium}></section>`, 
-            contenido += `<section class= "marcador">nombre:${info[i].artist.name}</section>`, 
-            contenido += `<section class= "marcador"><a href="detail-track.html?q=${info[i].id}">titulo:${info[i].title}</a></section>`
+            contenido += `<section class= "marcador">
+                                <div class= "aver">
+                                    <a href="detail-track.html?q=${info[i].id}">
+                                        <img src=${info[i].artist.picture_medium}>    
+                                    </a>
+                                </div>
+                                <div class= "aver">
+                                    <a href="detail-track.html?q=${info[i].id}">
+                                        ${info[i].artist.name}-${info[i].title}
+                                    </a>
+                                </div>
+                         </section>`
         }
 
         console.log(contenido);
