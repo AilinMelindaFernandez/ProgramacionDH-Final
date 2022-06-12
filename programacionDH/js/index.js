@@ -16,7 +16,7 @@ fetch(url)
         let contenido = "";
 
         for(let i=0; i<info.length; i++){
-            //construir un elemento de lista
+            //construir un elemento de listagit
 
             contenido += `<div class="card"><a href="detail-artist.html?id=${info[i].id}"> `,
             contenido += `<img src=${info[i].picture_big}>`, 

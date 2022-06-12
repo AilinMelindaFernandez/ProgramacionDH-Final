@@ -3,7 +3,7 @@ let qsToObject = new URLSearchParams(queryString); //Un objeto literal basado en
 let idArtista = qsToObject.get('id'); //obtengo el id
 
  
-let urlDetalle =`https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${idArtista}?Secret_Key=b60184653975ec2f350efc0300bb8544`;
+let urlDetalle =`https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${idArtista}?`;
 
 fetch(urlDetalle)
     .then(function(response){
