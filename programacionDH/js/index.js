@@ -58,7 +58,7 @@ fetch(`${proxy}${endpoints.artistas}`)
         console.log(error);
     })
 
-// ---------------------FECH DE ALBUNES---------------------------
+// ---------------------FECH DE ALBUMNES---------------------------
     
     fetch(`${proxy}${endpoints.albumes}`)
     .then(function(response){
@@ -76,14 +76,14 @@ fetch(`${proxy}${endpoints.artistas}`)
             //construir un elemento de lista
 
             contenido += `<div class= "cardalbum">
-                            <img src=${info[i].artist.picture_big}>  
-                            <div class="containeralbum">
-                                <h4><b>${info[i].title}</b></h4>
-                                <p>${info[i].artist.name}</p>
-                            </div>
+                            <a href=detail-album.html?id=${info[i].id}>
+                                <img src=${info[i].artist.picture_big}>  
+                                <div class="containeralbum">
+                                    <h4><b>${info[i].title}</b></h4>
+                                    <p>${info[i].artist.name}</p>
+                                </div>
+                            </a>
                           </div>`
-
-
         }
 
         console.log(contenido);
