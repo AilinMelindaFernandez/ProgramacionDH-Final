@@ -17,7 +17,7 @@ fetch(urlDetalleArtista)
 
        // cantidadDeFans.innerText = data.nb_fan;
         cantidadDeFans.innerHTML = `<p>Fans ${data.nb_fan}</p>`
-        name.innerText = data.name;
+        name.innerHTML = data.name;
         image.src= data.picture_big;
 
     })
@@ -43,7 +43,7 @@ fetch(urlDetalleArtistaAlbum)
             //construir un elemento de lista
 
             contenido += ` <li class="top5">
-                                <h4>${info[i].title}</h4>
+                                <a href="detail-album.html?id=${info[i].id}"><h4>${info[i].title}</h4></a>
                             </li>` 
         }
 

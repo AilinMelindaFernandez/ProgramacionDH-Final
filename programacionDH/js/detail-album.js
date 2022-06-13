@@ -17,14 +17,14 @@ fetch(urlDetalleAlbum)
         let name = document.querySelector('.titulosdetalleh3');
         let image = document.querySelector('img');
         let date = document.querySelector('.fecha');
-        let nombreArtista = document.querySelector('.nombre');
+        let nombreArtista = document.querySelector('.nombreArtista');
 
         //let genero = document.querySelector('.genero');
        // cantidadDeFans.innerText = data.nb_fan;
         name.innerText = data.title;
-        image.src= data.cover;
+        image.src= data.cover_big;
         date.innerText = data.release_date;
-        nombreArtista.innerText = data.artist.name;
+        nombreArtista.innerHTML += `<a href="detail-artist.html?id=${data.artist.id}">${data.artist.name}</a>`;
 
 
 //----------------------------GENERO-----------------------------------------
@@ -50,13 +50,17 @@ fetch(urlDetalleAlbum)
         let infoCanciones = data.tracks.data;
 
         //capturar el contenedor de lista
-        let cancioneslist = document.querySelector(".cancioneslist");
+        let cancioneslist = document.querySelector(".lista");
         let contenidoCanciones = "";
 
         //Los elementos están en un array y para obtenerlos hay recorrerlo.
         for(let i=0; i<infoCanciones.length; i++){
             //construir un elemento de lista
-            contenidoCanciones += `${infoCanciones[i].title}`
+            contenidoCanciones += `<li class="listadecancionesalbum">
+                                        <a href="detail-track.html?id=${infoCanciones[i].id}">
+                                            <h4>${infoCanciones[i].title}</h4>
+                                        </a>
+                                   </li>`
         }
         console.log(contenidoCanciones);
 

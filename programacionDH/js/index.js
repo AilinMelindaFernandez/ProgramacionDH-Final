@@ -115,12 +115,12 @@ fetch(`${proxy}${endpoints.artistas}`)
 
             contenido += `<section class= "marcador">
                                 <div class= "contenedorlinkscanciones">
-                                    <a href="detail-track.html?q=${info[i].id}">
+                                    <a href="detail-track.html?id=${info[i].id}">
                                         <img src=${info[i].artist.picture_medium}>    
                                     </a>
                                 </div>
                                 <div class= "contenedorlinkscanciones">
-                                    <a href="detail-track.html?q=${info[i].id}">
+                                    <a href="detail-track.html?id=${info[i].id}">
                                         ${info[i].artist.name}-${info[i].title}
                                     </a>
                                 </div>
