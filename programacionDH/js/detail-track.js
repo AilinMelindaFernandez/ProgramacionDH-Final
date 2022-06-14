@@ -18,7 +18,7 @@ fetch(`${proxy}${endpoint}${trackID}`)
                 <h3 class="titulosdetalleh3">${data.title_short}</h3>
                 <ol>
                     <li class="listainfocancion">
-                        <p><a href="./detail-artist.html?q=${data.contributors.id}">Artista: ${data.contributors.name}</a></p>
+                        <p><a href="./detail-artist.html?q=${data.artist.id}">Artista: ${data.artist.name}</a></p>
                     </li>
                     <li class="listainfocancion">
                         <p><a href="./detail-album.html?q=${data.album.id}">Album: ${data.album.title}</a></p>
