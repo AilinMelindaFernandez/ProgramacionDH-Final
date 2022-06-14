@@ -37,7 +37,7 @@ fetch(urlDetalleAlbum)
         //Los elementos están en un array y para obtenerlos hay recorrerlo.
         for(let i=0; i<info.length; i++){
             //construir un elemento de lista
-            contenido += `${info[i].name}`
+            contenido += `<a href="detail-generos.html?id=${data.genre_id}">${info[i].name}</a>`
         }
         console.log(contenido);
         

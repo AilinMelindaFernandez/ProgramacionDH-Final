@@ -403,19 +403,16 @@ footer{
 /*------------DETAIL-GENEROS----------*/
 
 .listagenerosartistas{
-    
     display:flex;
+    flex-wrap: wrap;
     flex-direction:row;
     justify-content:space-around;
-    align-items: flex-start;
+    align-items: center;
 }
 .contenedorinfoartist img{
     border-radius: 5%;
 }
-.imgartistaspop{
-    width:90px;
-    height: 90px;
-}
+
 .generosdetallelista{
     text-align: center;
     margin: 5% 5%;
@@ -588,6 +585,7 @@ footer{
 
       
      /*----------seccion canciones index-----------*/
+
     .canciones{
         margin: 100px 10px 100px 10px;
         display: flex;
@@ -597,16 +595,17 @@ footer{
         justify-content:center;
         align-items: center;
     }
-    .marcador p{
-        width: fit-content;
-        padding-left: 2%;
-        font-size: 20px;
-    }
-    .marcador img {
-        max-width: 20%;
-        border-radius: 4%;
-        box-shadow: 0 0 1px #b3ff51, 0 0 2px #b3ff51, 0 0 6px #b3ff51, 0 0 12px #b3ff51, inset 0 0 1px #b3ff51, inset 0 0 2px #b3ff51, inset 0 0 6px #b3ff51, inset 0 0 12px #b3ff51;
-    }
+    .marcador{
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: row;
+         align-items: center;
+         margin: 15px;
+         justify-content: center;
+     }
+     .marcador .contenedorlinkscanciones a{
+         font-size: 20px;
+     }
 
     /*----------GENEROS-----------*/
     .cardgenero {
@@ -659,9 +658,7 @@ footer{
         justify-content:space-around;
         align-items: flex-start;
     }
-    .imgartistaspop{
-        width:90px;
-    }
+   
     .generosdetallelista{
         text-align: center; 
         margin: 3% 0%;
