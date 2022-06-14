@@ -17,7 +17,7 @@ fetch(urlGeneros)
             //construir un elemento de lista
 
             contenido += `<div class="cardgenero">
-                            <a href="detail-generos.html?id=${info[i].id}">
+                            <a href="detail-generos.html?q=${info[i].id}">
                                 <img src="${info[i].picture_medium}" alt=""> 
                                 <h4><b>${info[i].name}</b></h4>  
                             </a> 

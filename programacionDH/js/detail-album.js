@@ -1,6 +1,6 @@
 let queryString = location.search; //obtengo la qs
 let qsToObject = new URLSearchParams(queryString); //Un objeto literal basado en la qs
-let idAlbum = qsToObject.get('id'); //obtengo el id
+let idAlbum = qsToObject.get('q'); //obtengo el id
 
  
 let urlDetalleAlbum =`https://api.allorigins.win/raw?url=https://api.deezer.com/album/${idAlbum}?`;
@@ -24,7 +24,7 @@ fetch(urlDetalleAlbum)
         name.innerText = data.title;
         image.src= data.cover_big;
         date.innerText = data.release_date;
-        nombreArtista.innerHTML += `<a href="detail-artist.html?id=${data.artist.id}">${data.artist.name}</a>`;
+        nombreArtista.innerHTML += `<a href="detail-artist.html?q=${data.artist.id}">${data.artist.name}</a>`;
 
 
 //----------------------------GENERO-----------------------------------------
@@ -37,7 +37,7 @@ fetch(urlDetalleAlbum)
         //Los elementos están en un array y para obtenerlos hay recorrerlo.
         for(let i=0; i<info.length; i++){
             //construir un elemento de lista
-            contenido += `<a href="detail-generos.html?id=${data.genre_id}">${info[i].name}</a>`
+            contenido += `<a href="detail-generos.html?q=${data.genre_id}">${info[i].name}</a>`
         }
         console.log(contenido);
         
@@ -57,7 +57,7 @@ fetch(urlDetalleAlbum)
         for(let i=0; i<infoCanciones.length; i++){
             //construir un elemento de lista
             contenidoCanciones += `<li class="listadecancionesalbum">
-                                        <a href="detail-track.html?id=${infoCanciones[i].id}">
+                                        <a href="detail-track.html?q=${infoCanciones[i].id}">
                                             <h4>${infoCanciones[i].title}</h4>
                                         </a>
                                    </li>`

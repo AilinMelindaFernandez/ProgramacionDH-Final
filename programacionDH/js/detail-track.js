@@ -6,7 +6,7 @@ let endpoint = "https://api.deezer.com/track/"
 
 let query = location.search
 let objetoQuery = new URLSearchParams(query)
-let trackID = objetoQuery.get('id')
+let trackID = objetoQuery.get('q')
 
 fetch(`${proxy}${endpoint}${trackID}`)
     .then(function(data) {return data.json()})
@@ -18,10 +18,10 @@ fetch(`${proxy}${endpoint}${trackID}`)
                 <h3 class="titulosdetalleh3">${data.title_short}</h3>
                 <ol>
                     <li class="listainfocancion">
-                        <p><a href="./detail-artist.html?id=${data.contributors.id}">Artista: ${data.contributors.name}</a></p>
+                        <p><a href="./detail-artist.html?q=${data.contributors.id}">Artista: ${data.contributors.name}</a></p>
                     </li>
                     <li class="listainfocancion">
-                        <p><a href="./detail-album.html?id=${data.album.id}">Album: ${data.album.title}</a></p>
+                        <p><a href="./detail-album.html?q=${data.album.id}">Album: ${data.album.title}</a></p>
                     </li>
                     <li class="listainfocancion">
                         <p>Fecha de lanzamiento: ${data.release_date}</p>

@@ -39,7 +39,7 @@ fetch(`${proxy}${endpoints.artistas}`)
             //construir un elemento de lista
 
             contenido += `<div class="card">
-                            <a href="detail-artist.html?id=${info[i].id}"> 
+                            <a href="detail-artist.html?q=${info[i].id}"> 
                                 <img src=${info[i].picture_big}>
                                 <div class="container">
                                     <h4><b>${info[i].name}</b></h4>
@@ -76,7 +76,7 @@ fetch(`${proxy}${endpoints.artistas}`)
             //construir un elemento de lista
 
             contenido += `<div class= "cardalbum">
-                            <a href=detail-album.html?id=${info[i].id}>
+                            <a href=detail-album.html?q=${info[i].id}>
                                 <img src=${info[i].artist.picture_big}>  
                                 <div class="containeralbum">
                                     <h4><b>${info[i].title}</b></h4>
@@ -115,12 +115,12 @@ fetch(`${proxy}${endpoints.artistas}`)
 
             contenido += `<section class= "marcador">
                                 <div class= "contenedorlinkscanciones">
-                                    <a href="detail-track.html?id=${info[i].id}">
+                                    <a href="detail-track.html?q=${info[i].id}">
                                         <img src=${info[i].artist.picture_medium}>    
                                     </a>
                                 </div>
                                 <div class= "contenedorlinkscanciones">
-                                    <a href="detail-track.html?id=${info[i].id}">
+                                    <a href="detail-track.html?q=${info[i].id}">
                                         ${info[i].artist.name}-${info[i].title}
                                     </a>
                                 </div>

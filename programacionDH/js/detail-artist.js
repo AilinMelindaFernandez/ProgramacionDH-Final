@@ -1,6 +1,6 @@
 let queryString = location.search; //obtengo la qs
 let qsToObject = new URLSearchParams(queryString); //Un objeto literal basado en la qs
-let idArtista = qsToObject.get('id'); //obtengo el id
+let idArtista = qsToObject.get('q'); //obtengo el id
 
  
 let urlDetalleArtista =`https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${idArtista}?`;
@@ -43,7 +43,7 @@ fetch(urlDetalleArtistaAlbum)
             //construir un elemento de lista
 
             contenido += ` <li class="top5">
-                                <a href="detail-album.html?id=${info[i].id}"><h4>${info[i].title}</h4></a>
+                                <a href="detail-album.html?q=${info[i].id}"><h4>${info[i].title}</h4></a>
                             </li>` 
         }
 
