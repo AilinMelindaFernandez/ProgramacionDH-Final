@@ -29,9 +29,10 @@
                 <li><a href="generos.html">GENEROS</a></li>
                 <li><a href="playlist.html">PLAYLIST</a></li>
                 <li> 
-                    <form method="get" action="search-results.html">
-                        <input class="busqueda" type="search" placeholder="Buscar">
-                        <button><i class="fa-solid fe-search"></i></button> <!--Agregamos un boton-->
+                    <form method="get" action="./search-results.html" id="formulario">
+                        <input class="busqueda" type="text" placeholder="Buscar" id="agarrarinfo">
+                        <input type="submit" name="enviar" value="Enviar">
+                        <!-- <button><i class="fa-solid fe-search"></i></button> Agregamos un boton -->
                     </form>
                 </li>
             </ul>
@@ -109,7 +110,6 @@
 
 
     <script src="./js/index.js"></script>
-
 
 </body>
 </html>
