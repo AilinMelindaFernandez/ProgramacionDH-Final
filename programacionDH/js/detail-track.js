@@ -1,7 +1,7 @@
 let infocancioncontenedor = document.querySelector(".infocancioncontenedor")
 let widget = document.querySelector(".reproductor")
 
-let proxy = "https://api.allorigins.win/raw?url="
+let proxy = "https://cors-anywhere.herokuapp.com/"
 let endpoint = "https://api.deezer.com/track/"
 
 let query = location.search

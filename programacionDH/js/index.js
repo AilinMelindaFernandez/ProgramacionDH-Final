@@ -13,7 +13,7 @@ formularioHeader.addEventListener("submit", function(evento) {
     }
 })
 
-let proxy = "https://api.allorigins.win/raw?url="
+let proxy = "https://cors-anywhere.herokuapp.com/"
 let endpoints = {
     canciones: "https://api.deezer.com/chart",
     albumes: "https://api.deezer.com/chart",

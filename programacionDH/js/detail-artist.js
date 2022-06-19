@@ -3,7 +3,7 @@ let qsToObject = new URLSearchParams(queryString); //Un objeto literal basado en
 let idArtista = qsToObject.get('q'); //obtengo el id
 
  
-let urlDetalleArtista =`https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${idArtista}?`;
+let urlDetalleArtista =`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${idArtista}?`;
 
 fetch(urlDetalleArtista)
     .then(function(response){
@@ -25,7 +25,7 @@ fetch(urlDetalleArtista)
         console.log(error)
     })
 
-    let urlDetalleArtistaAlbum =`https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${idArtista}/albums`;
+    let urlDetalleArtistaAlbum =`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${idArtista}/albums`;
     
 fetch(urlDetalleArtistaAlbum)
     .then(function(response){
