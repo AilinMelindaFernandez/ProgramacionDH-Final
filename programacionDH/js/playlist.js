@@ -16,8 +16,7 @@ for (let i = 0; i < array_recupero_storage.length; i++) {
     })
     .then(function(data) {
         
-        console.log("🚀 ~ file: playlist.js ~ line 16 ~ .then ~ data", data)
-
+       
         ul.innerHTML += `
             <li class="contenedorplaylist">
                 <a href="./detail-track.html?q=${data.id}">
