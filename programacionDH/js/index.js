@@ -1,17 +1,6 @@
 
 // ---------------------FORMULARIO BUSCADOR---------------------------
 
-let formularioHeader = document.querySelector("form")
-let inputFormulario = document.querySelector(".busqueda")
-
-formularioHeader.addEventListener("submit", function(evento) {
-    evento.preventDefault()
-    if (inputFormulario.value.length >= 3) {
-        this.submit()
-    } else {
-        alert("Son 3 caracteres como minimo")
-    }
-})
 
 let proxy = "https://cors-anywhere.herokuapp.com/"
 let endpoints = {
@@ -19,7 +8,6 @@ let endpoints = {
     albumes: "https://api.deezer.com/chart",
     artistas: "https://api.deezer.com/chart"
 }
-
 // ---------------------FECH DE ARTISTAS---------------------------
 
 fetch(`${proxy}${endpoints.artistas}`)
@@ -58,7 +46,7 @@ fetch(`${proxy}${endpoints.artistas}`)
         console.log(error);
     })
 
-// ---------------------FECH DE ALBUMNES---------------------------
+// ---------------------FECH DE ALBUMES---------------------------
     
     fetch(`${proxy}${endpoints.albumes}`)
     .then(function(response){
