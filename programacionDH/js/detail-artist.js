@@ -3,7 +3,7 @@ let qsToObject = new URLSearchParams(queryString); //Un objeto literal basado en
 let idArtista = qsToObject.get('q'); //obtengo el id
 
  
-let urlDetalleArtista =`https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${idArtista}?`;
+let urlDetalleArtista =`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${idArtista}?`;
 
 fetch(urlDetalleArtista)
     .then(function(response){

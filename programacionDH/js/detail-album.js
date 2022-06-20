@@ -4,7 +4,7 @@ let idAlbum = qsToObject.get('q'); //obtengo el id
 
  
 
-let urlDetalleAlbum =`https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${idAlbum}?`;
+let urlDetalleAlbum =`https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${idAlbum}?`;
 
 fetch(urlDetalleAlbum)
     .then(function(response){
