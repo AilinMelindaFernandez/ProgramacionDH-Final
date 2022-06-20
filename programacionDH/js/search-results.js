@@ -3,10 +3,10 @@ let query = location.search
 let objetoQuery = new URLSearchParams(query)
 let busqueda = objetoQuery.get('q')
 
-let proxy = "https://cors-anywhere.herokuapp.com/"
-let endpoint = "https://api.deezer.com/search?q="
+let proxy = 'https://cors-anywhere.herokuapp.com/'
+let endpoint = 'https://api.deezer.com/search?q=eminen'
 
-fetch(`${proxy}${endpoint}${busqueda}`)
+fetch(`${proxy}${endpoint}`)
     .then(function(response) {return response.json()})
     .then(function(data) {
         let gif = document.querySelector(".gif-carga")

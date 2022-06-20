@@ -8,7 +8,6 @@ let proxy = "https://api.allorigins.win/raw?url="
 let endpoint = "https://api.deezer.com/track/"
 
 let ul = document.querySelector('.listado_playlist')
-console.log("🚀 ~ file: playlist.js ~ line 9 ~ ul", ul)
 
 for (let i = 0; i < array_recupero_storage.length; i++) {
     fetch(`${proxy}${endpoint}${array_recupero_storage[i]}`)
