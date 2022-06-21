@@ -57,7 +57,7 @@ fetch(`${proxy}${endpoint}${trackID}`)
                 like.style.color = 'grey'
             } else {
                 favoritos.push(data.id)
-                like.style.color = 'green'
+                like.style.color = 'red'
             }
             let favoritos_en_string = JSON.stringify(favoritos)
             localStorage.setItem("canciones_favoritas",favoritos_en_string)
