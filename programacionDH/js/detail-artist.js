@@ -15,7 +15,6 @@ fetch(urlDetalleArtista)
         let image = document.querySelector('img');
         let cantidadDeFans = document.querySelector('.fans');
 
-       // cantidadDeFans.innerText = data.nb_fan;
         cantidadDeFans.innerHTML = `<p>Fans ${data.nb_fan}</p>`
         name.innerHTML = data.name;
         image.src= data.picture_big;
